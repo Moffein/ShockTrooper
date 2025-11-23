@@ -629,6 +629,9 @@ namespace GaleShockTrooper.Modules
                 UnityEngine.Object.DestroyImmediate(machines[i]);
             }
 
+            CharacterBody body = bodyPrefab.GetComponent<CharacterBody>();
+            body.vehicleIdleStateMachine = Array.Empty<EntityStateMachine>();
+
             NetworkStateMachine networkMachine = bodyPrefab.GetComponent<NetworkStateMachine>();
             networkMachine.stateMachines = Array.Empty<EntityStateMachine>();
 
@@ -653,7 +656,7 @@ namespace GaleShockTrooper.Modules
         /// <param name="machineName">the custom name of your statemachine, used for assigning in SkillDefs, and any other case where you want to find a certain state machine on your body</param>
         /// <param name="mainStateType">most commonly, your skill states will call SetNextStateToMain, which will return to this state</param>
         /// <param name="initalStateType"></param>
-        public static EntityStateMachine AddEntityStateMachine(GameObject prefab, string machineName, Type mainStateType = null, Type initalStateType = null, bool addToHurt = true, bool addToDeath = true)
+        public static EntityStateMachine AddEntityStateMachine(GameObject prefab, string machineName, Type mainStateType = null, Type initalStateType = null, bool addToHurt = true, bool addToDeath = true, bool vehicleIdle = true)
         {
             EntityStateMachine entityStateMachine = EntityStateMachine.FindByCustomName(prefab, machineName);
             if (entityStateMachine == null)
@@ -700,6 +703,13 @@ namespace GaleShockTrooper.Modules
             if (setStateOnHurt && addToHurt)
             {
                 setStateOnHurt.idleStateMachine = setStateOnHurt.idleStateMachine.Append(entityStateMachine).ToArray();
+            }
+
+            CharacterBody body = prefab.GetComponent<CharacterBody>();
+            if (vehicleIdle && body)
+            {
+                if (body.vehicleIdleStateMachine == null) body.vehicleIdleStateMachine = Array.Empty<EntityStateMachine>();
+                body.vehicleIdleStateMachine = body.vehicleIdleStateMachine.Append(entityStateMachine).ToArray();
             }
 
             return entityStateMachine;
