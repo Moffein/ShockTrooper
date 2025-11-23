@@ -28,7 +28,7 @@ namespace EntityStates.GaleShockTrooperStates.Weapon.MissilePainter
         public static string entrySoundString = "Play_railgunner_m2_scope_in";
         public static string exitSoundString = "Play_railgunner_m2_scope_out";
         public static float baseEntryduration = 0.3f;
-        public static float baseLockonDuration = 0.45f;
+        public static float baseLockonDuration = 0.3f;
         public static float baseLockonAngle = 60f;
         public static float baseLockonRange = 200f;
 
