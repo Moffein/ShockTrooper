@@ -26,7 +26,7 @@
 		<PackageReference Include="BepInEx.Core" Version="5.*" />
 		<PackageReference Include="R2API.Deployable" Version="1.0.1" />
 		<PackageReference Include="R2API.Items" Version="1.0.7" />
-		<PackageReference Include="RiskOfRain2.GameLibs" Version="1.4.0-r.0" />
+		<PackageReference Include="RiskOfRain2.GameLibs" Version="1.4.1-r.0" />
 		<PackageReference Include="UnityEngine.Modules" Version="2021.3.33" />
 		<PackageReference Include="MMHOOK.RoR2" Version="2025.11.19">
 			<NoWarn>NU1701</NoWarn>
@@ -43,6 +43,9 @@
 	<ItemGroup>
 	  <Reference Include="AutoSprint">
 	    <HintPath>..\libs\AutoSprint.dll</HintPath>
+	  </Reference>
+	  <Reference Include="CustomEmotesAPI">
+	    <HintPath>..\libs\CustomEmotesAPI.dll</HintPath>
 	  </Reference>
 	  <Reference Include="ExtraDamageTypes">
 	    <HintPath>..\libs\ExtraDamageTypes.dll</HintPath>

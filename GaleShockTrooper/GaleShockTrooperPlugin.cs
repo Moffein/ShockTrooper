@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using GaleShockTrooper.Characters.Drones.GaleShockTrooperDrone;
+using GaleShockTrooper.Modules;
 using GaleShockTrooper.Survivors.GaleShockTrooperSurvivor;
 using R2API.Utils;
 using RoR2;
@@ -14,6 +15,7 @@ using System.Security.Permissions;
 namespace GaleShockTrooper
 {
     //[BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("com.weliveinasociety.CustomEmotesAPI", BepInDependency.DependencyFlags.SoftDependency)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     [BepInDependency(R2API.R2API.PluginGUID)]
     [BepInDependency(R2API.PrefabAPI.PluginGUID)]
@@ -30,7 +32,7 @@ namespace GaleShockTrooper
         //   this shouldn't even have to be said
         public const string MODUID = "com.TheConstellate.ShockTrooper";
         public const string MODNAME = "Shock Trooper";
-        public const string MODVERSION = "1.1.11";
+        public const string MODVERSION = "1.2.0";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
         public const string DEVELOPER_PREFIX = "GALE";
@@ -53,6 +55,8 @@ namespace GaleShockTrooper
 
             // make a content pack and add it. this has to be last
             new Modules.ContentPacks().Initialize();
+
+            ModCompat.Init();
         }
     }
 }
