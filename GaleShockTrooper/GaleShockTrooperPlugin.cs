@@ -27,14 +27,10 @@ namespace GaleShockTrooper
     [BepInPlugin(MODUID, MODNAME, MODVERSION)]
     public class GaleShockTrooperPlugin : BaseUnityPlugin
     {
-        // if you do not change this, you are giving permission to deprecate the mod-
-        //  please change the names to your own stuff, thanks
-        //   this shouldn't even have to be said
         public const string MODUID = "com.TheConstellate.ShockTrooper";
         public const string MODNAME = "Shock Trooper";
-        public const string MODVERSION = "1.2.0";
+        public const string MODVERSION = "1.2.1";
 
-        // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
         public const string DEVELOPER_PREFIX = "GALE";
 
         public static GaleShockTrooperPlugin instance;

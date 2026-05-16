@@ -3,6 +3,7 @@ using GaleShockTrooper.Modules.Characters;
 using RoR2;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 /* for custom copy format in keb's helper
 {childName},
@@ -18,7 +19,202 @@ namespace GaleShockTrooper.Survivors.GaleShockTrooperSurvivor.Content
         public static GameObject CustomShatDisplay;
         protected override void SetItemDisplayRules(List<ItemDisplayRuleSet.KeyAssetRuleGroup> itemDisplayRules)
         {
-            //Completed
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["DronesDropDynamite"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DronesDropDynamiteDisplay"),
+                    "Backpack",
+                    new Vector3(-0.00337F, -0.12093F, 0.02046F),
+                    new Vector3(32.5382F, 353.06F, 176.9222F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["Parry"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("ParryDisplay"),
+                    "Backpack",
+                    new Vector3(-0.00474F, -0.16635F, -0.09402F),
+                    new Vector3(0F, 180F, 0F),
+                    new Vector3(1F, 1F, 1F)
+                    )
+                ));
+
+            /*itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["MasterCore"],
+                ItemDisplays.CreateDisplayRule(Addressables.LoadAssetAsync<GameObject>("RoR2/DLC3/Items/MasterCore/DisplayPowerOrbSphereFollower.prefab").WaitForCompletion(),
+                    "Tail2",
+                    new Vector3(0f, 0f, 0f),
+                    new Vector3(0f, 0f, 0f),
+                    new Vector3(1f, 1f, 1f)
+                    )
+                ));*/
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["MasterBattery"],
+                ItemDisplays.CreateDisplayRule(Addressables.LoadAssetAsync<GameObject>("RoR2/DLC3/Items/MasterBattery/DisplayPowerOrbSphereFollower.prefab").WaitForCompletion(),
+                    "Base",
+                    new Vector3(-0.41902F, 0.01955F, 0.55403F),
+                    new Vector3(0F, 0F, 0F),
+                    new Vector3(0.5F, 0.5F, 0.5F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["PowerCube"],
+                ItemDisplays.CreateDisplayRule(Addressables.LoadAssetAsync<GameObject>("RoR2/DLC3/Items/PowerCube/DisplayPowerCubeFollower.prefab").WaitForCompletion(),
+                    "Base",
+                    new Vector3(-0.75877F, 0.02561F, 0.47629F),
+                    new Vector3(0F, 0F, 0F),
+                    new Vector3(1F, 1F, 1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["PowerPyramid"],
+                ItemDisplays.CreateDisplayRule(Addressables.LoadAssetAsync<GameObject>("RoR2/DLC3/Items/PowerPyramid/DisplayPowerPyramidFollower.prefab").WaitForCompletion(),
+                    "Base",
+                    new Vector3(-1.28883F, 0.03926F, 0.58036F),
+                    new Vector3(0F, 0F, 0F),
+                    new Vector3(1F, 1F, 1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["CookedSteak"],
+                ItemDisplays.CreateDisplayRule(Addressables.LoadAssetAsync<GameObject>("RoR2/DLC3/Items/CookedSteak/DisplayCookedSteakCurved.prefab").WaitForCompletion(),
+                    "Head",
+                    new Vector3(-0.10975F, 0.20281F, -0.12022F),
+                    new Vector3(297.1067F, 162.2858F, 109.9649F),
+                    new Vector3(-0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["ExtraEquipment"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayExtraEquipment"),
+                        "ThighL",
+                        new Vector3(-0.07819F, 0.07083F, 0.09924F),
+                        new Vector3(350.7468F, 312.019F, 171.3385F),
+                        new Vector3(0.1F, 0.1F, 0.1F)
+
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["BonusHealthBoost"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayQuickFix"),
+                    "ShoulderL",
+                    new Vector3(-0.0119F, 0.25304F, 0.04544F),
+                    new Vector3(0.62284F, 29.23043F, 35.40512F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["Stew"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("StewDisplay"),
+                    "ShoulderR",
+                    new Vector3(0.00387F, 0.25927F, 0.00653F),
+                    new Vector3(37.49449F, 99.81663F, 14.64683F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["UltimateMeal"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("UltimateMealDisplay"),
+                        "Head",
+                        new Vector3(0F, 0.3F, 0F),
+                        new Vector3(0F, 0F, 0F),
+                        new Vector3(1F, 1F, 1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["WyrmOnHit"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayWyrmOnHit"),
+                    "Backpack",
+                    new Vector3(0.06495F, 0.0237F, 0.00476F),
+                    new Vector3(359.3283F, 276.7793F, 11.97136F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["ShockDamageAura"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("ShockDamageAuraDisplay"),
+                    "Head",
+                    new Vector3(0F, 0.21809F, -0.00173F),
+                    new Vector3(0F, 0F, 0F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["ShieldBooster"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayShieldBooster"),
+                    "UpperarmR",
+                    new Vector3(0.01774F, 0.21391F, -0.01381F),
+                    new Vector3(341.8083F, 52.07731F, 285.3918F),
+                    new Vector3(0.3F, 0.3F, 0.3F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["SpeedOnPickup"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("SpeedOnPickupDisplay"),
+                    "Backpack",
+                    new Vector3(0F, -0.10403F, -0.06643F),
+                    new Vector3(0F, 180F, 0F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["PhysicsProjectile"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("PhysicsProjectileDisplay"),
+                    "Backpack",
+                    new Vector3(-0.01552F, 0.07434F, -0.12045F),
+                    new Vector3(0F, 180F, 0F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["Duplicator"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayDuplicator"),
+                    "Tail1",
+                    new Vector3(-0.05611F, 0.02966F, 0.16155F),
+                    new Vector3(0F, 180F, 90F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["SharedSuffering"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("SharedSufferingDisplay"),
+                    "Backpack",
+                    new Vector3(0F, -0.05341F, -0.06371F),
+                    new Vector3(270F, 0F, 0F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["JumpDamageStrike"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayJumpDamageStrike"),
+                    "FootR",
+                    new Vector3(-0.05381F, -0.03769F, 0.05384F),
+                    new Vector3(315.8147F, 334.9754F, 165.2825F),
+                    new Vector3(0.4F, 0.4F, 0.4F)
+                    ),
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayJumpDamageStrike"),
+                    "FootL",
+                    new Vector3(0.04455F, -0.04463F, 0.05855F),
+                    new Vector3(315.2382F, 31.96171F, 179.5F),
+                    new Vector3(0.4F, 0.4F, 0.4F)
+
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["BarrierOnCooldown"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayBarrierOnCooldown"),
+                    "ThighL",
+                    new Vector3(-0.13641F, 0.23834F, 0.04211F),
+                    new Vector3(-0.00001F, 180F, 180F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
+
+            itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["CritAtLowerElevation"],
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("CritAtLowerElevationDisplay"),
+                    "Tail3",
+                    new Vector3(0.02014F, 0.09681F, -0.00757F),
+                    new Vector3(284.6751F, 90.55054F, 36.18997F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    )
+                ));
 
             itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["Thorns"],
                 ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayRazorwireLeft"),
