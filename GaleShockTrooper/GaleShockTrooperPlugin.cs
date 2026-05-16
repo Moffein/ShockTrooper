@@ -29,7 +29,7 @@ namespace GaleShockTrooper
     {
         public const string MODUID = "com.TheConstellate.ShockTrooper";
         public const string MODNAME = "Shock Trooper";
-        public const string MODVERSION = "1.2.1";
+        public const string MODVERSION = "1.2.2";
 
         public const string DEVELOPER_PREFIX = "GALE";
 

@@ -139,10 +139,16 @@ namespace GaleShockTrooper.Survivors.GaleShockTrooperSurvivor.Content
 
             itemDisplayRules.Add(ItemDisplays.CreateDisplayRuleGroupWithRules(ItemDisplays.KeyAssets["ShieldBooster"],
                 ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayShieldBooster"),
-                    "UpperarmR",
-                    new Vector3(0.01774F, 0.21391F, -0.01381F),
-                    new Vector3(341.8083F, 52.07731F, 285.3918F),
-                    new Vector3(0.3F, 0.3F, 0.3F)
+                    "GunplateL",
+                    new Vector3(-0.1F, 0F, 0F),
+                    new Vector3(90F, 330F, 0F),
+                    new Vector3(0.1F, 0.1F, 0.1F)
+                    ),
+                ItemDisplays.CreateDisplayRule(ItemDisplays.LoadDisplay("DisplayShieldBooster"),
+                    "GunplateR",
+                    new Vector3(0.1F, 0F, 0F),
+                    new Vector3(90F, 30F, 0F),
+                    new Vector3(-0.1F, 0.1F, 0.1F)
                     )
                 ));
 
