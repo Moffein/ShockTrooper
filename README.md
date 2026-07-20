@@ -2,8 +2,6 @@
 
 Created by **TheConstellate**
 
-Direct all gameplay/balance feedback to **moobloom_** on Discord.
-
 Report any bugs/networking issues to **Moffein**.
 
 ## OVERVIEW:
