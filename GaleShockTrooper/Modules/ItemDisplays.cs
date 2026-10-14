@@ -20,7 +20,8 @@ namespace GaleShockTrooper.Modules
                 return;
             initialized = true;
 
-            PopulateDisplays();
+            //TODO: FIX FOR DLC4
+            //PopulateDisplays();
         }
 
         internal static void DisposeWhenDone()

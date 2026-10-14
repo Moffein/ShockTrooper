@@ -91,7 +91,8 @@ namespace GaleShockTrooper.Survivors.GaleShockTrooperSurvivor
 
         public override UnlockableDef characterUnlockableDef => CharacterConfig.forceUnlock ? null : Content.CharacterUnlockables.characterUnlockableDef;
 
-        public override ItemDisplaysBase itemDisplays => new GaleShockTrooper.Survivors.GaleShockTrooperSurvivor.Content.CharacterItemDisplaySetup();
+        //TODO: FIX FOR DLC4    
+        //public override ItemDisplaysBase itemDisplays => new GaleShockTrooper.Survivors.GaleShockTrooperSurvivor.Content.CharacterItemDisplaySetup();
 
         //set in base classes
         public override AssetBundle assetBundle { get; protected set; }
