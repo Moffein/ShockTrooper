@@ -8,6 +8,7 @@ using R2API;
 using RoR2;
 using RoR2.Skills;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -76,6 +77,20 @@ namespace GaleShockTrooper.Characters.Drones.GaleShockTrooperDrone
         {
             base.Initialize();
             InitializeCharacter();
+
+            //Nuke aimanimators due to nullref
+            AimAnimator[] allAimAnimators = bodyPrefab.GetComponentsInChildren<AimAnimator>();
+            if (allAimAnimators != null)
+            {
+                for (int i = allAimAnimators.Length - 1; i >= 0; i--)
+                {
+                    var anim = allAimAnimators[i];
+                    if (anim != null)
+                    {
+                        UnityEngine.Object.Destroy(anim);
+                    }
+                }
+            }
         }
 
         public override void InitializeCharacter()

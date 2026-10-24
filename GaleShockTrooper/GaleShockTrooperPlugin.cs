@@ -7,6 +7,7 @@ using RoR2;
 using System.Collections.Generic;
 using System.Security;
 using System.Security.Permissions;
+using UnityEngine;
 
 [module: UnverifiableCode]
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
@@ -29,7 +30,7 @@ namespace GaleShockTrooper
     {
         public const string MODUID = "com.TheConstellate.ShockTrooper";
         public const string MODNAME = "Shock Trooper";
-        public const string MODVERSION = "1.2.3";
+        public const string MODVERSION = "1.2.5";
 
         public const string DEVELOPER_PREFIX = "GALE";
 
