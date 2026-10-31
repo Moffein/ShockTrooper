@@ -578,7 +578,7 @@ namespace GaleShockTrooper.Survivors.GaleShockTrooperSurvivor
             {
                 new ItemCountPair()
                 {
-                    itemDef = RoR2Content.Items.UseAmbientLevel,
+                    itemDef = Addressables.LoadAssetAsync<ItemDef>("b52591905fc7201459529052750fba7b").WaitForCompletion(),
                     count = 1
                 },
                 new ItemCountPair()
