@@ -127,6 +127,8 @@ namespace GaleShockTrooper.Survivors.GaleShockTrooperSurvivor.Content
             GameObject effect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Commando/TracerCommandoDefault.prefab").WaitForCompletion().InstantiateClone("GaleShockTrooper_ShotgunTracer", false);
             //effect.GetComponent<Tracer>().speed = 250f;
 
+            UnityEngine.Object.Destroy(effect.GetComponent<EffectManagerHelper>()); //Stops console spam
+
             LineRenderer[] lrs = effect.GetComponentsInChildren<LineRenderer>();
             for (int i = 0; i < lrs.Length; i++)
             {
@@ -264,6 +266,8 @@ namespace GaleShockTrooper.Survivors.GaleShockTrooperSurvivor.Content
             lr.widthMultiplier = 0.4f;*/
             var tracer = tracerEffect.GetComponent<Tracer>();
             tracer.speed = 150f;
+
+            UnityEngine.Object.Destroy(tracerEffect.GetComponent<EffectManagerHelper>()); //Stops console spam
 
             Color orbColor = new Color32(50, 150, 255, 255);
 
